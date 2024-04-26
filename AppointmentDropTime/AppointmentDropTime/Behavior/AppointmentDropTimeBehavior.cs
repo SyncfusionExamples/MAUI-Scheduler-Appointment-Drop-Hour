@@ -15,11 +15,11 @@ internal class AppointmentDropTimeBehavior : Behavior<ContentPage>
         this.scheduler = bindable.FindByName<SfScheduler>("Scheduler");
         if (this.scheduler != null)
         {
-            this.scheduler.AppointmentDrop += Scheduler_AppointmentDrop;
+            this.scheduler.AppointmentDrop += OnSchedulerAppointmentDrop;
         }
     }
 
-    private void Scheduler_AppointmentDrop(object? sender, AppointmentDropEventArgs e)
+    private void OnSchedulerAppointmentDrop(object? sender, AppointmentDropEventArgs e)
     {
         var dropTime = e.DropTime;
         e.DropTime = new DateTime(dropTime.Year, dropTime.Month, dropTime.Day, dropTime.Hour, 0, 0);
