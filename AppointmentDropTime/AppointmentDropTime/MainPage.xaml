@@ -13,7 +13,8 @@
         <local:AppointmentDropTimeBehavior/>
     </ContentPage.Behaviors>
 
-    <schedule:SfScheduler x:Name="Scheduler"                      
+    <schedule:SfScheduler x:Name="Scheduler"
+                          x:DataType="local:SchedulerViewModel"
                           AppointmentsSource="{Binding Events}"
                           View="Day"/>
 

@@ -31,7 +31,7 @@ internal class AppointmentDropTimeBehavior : Behavior<ContentPage>
 
         if (this.scheduler != null)
         {
-            this.scheduler.AppointmentDrop -= Scheduler_AppointmentDrop;
+            this.scheduler.AppointmentDrop -= OnSchedulerAppointmentDrop;
             this.scheduler = null;
         }
     }
